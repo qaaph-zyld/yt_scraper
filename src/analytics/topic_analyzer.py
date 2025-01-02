@@ -1,5 +1,5 @@
 """
-Topic analysis module with caching and performance optimizations.
+Topic analysis module with security and performance optimizations.
 """
 from typing import Dict, List, Any, Optional
 import nltk
@@ -11,15 +11,21 @@ from sklearn.cluster import KMeans
 import numpy as np
 from functools import lru_cache
 import hashlib
-import logging
-from loguru import logger
 import time
+from loguru import logger
+from src.security.rate_limiter import rate_limit, RateLimitExceeded
+from src.security.input_validator import InputValidator, ValidationRule, validate_input
 
 class TopicAnalyzer:
+    """Analyzes topics and themes in content with security measures."""
+    
     def __init__(self, cache_size: int = 128):
-        """Initialize the topic analyzer with caching."""
+        """Initialize the topic analyzer with security and caching."""
         self.logger = logger.bind(module="topic_analyzer")
-        self.logger.info("Initializing TopicAnalyzer with cache_size={}", cache_size)
+        
+        # Initialize input validator
+        self._validator = InputValidator()
+        self._setup_validation_rules()
         
         # Download required NLTK data if not already present
         try:
@@ -35,15 +41,49 @@ class TopicAnalyzer:
         self.stop_words = set(stopwords.words('english'))
         self.vectorizer = TfidfVectorizer(max_features=1000)
         self.kmeans = KMeans(n_clusters=5, random_state=42)
+        
+        self.logger.info("Initialized TopicAnalyzer with cache_size={}", cache_size)
+    
+    def _setup_validation_rules(self):
+        """Set up input validation rules."""
+        # Content validation rules
+        self._validator.add_rule('content', ValidationRule(
+            field_type=str,
+            min_length=1,
+            max_length=1000000  # 1MB text limit
+        ))
+        
+        # Video data validation rules
+        self._validator.add_rule('video_id', ValidationRule(
+            field_type=str,
+            pattern=r'^[a-zA-Z0-9_-]{11}$'  # YouTube video ID pattern
+        ))
+        
+        self._validator.add_rule('title', ValidationRule(
+            field_type=str,
+            max_length=1000
+        ))
+        
+        self._validator.add_rule('description', ValidationRule(
+            field_type=str,
+            max_length=5000
+        ))
+        
+        self._validator.add_rule('transcript', ValidationRule(
+            field_type=str,
+            max_length=1000000
+        ))
     
     @lru_cache(maxsize=128)
     def _generate_content_hash(self, content: str) -> str:
         """Generate a hash for content to use as cache key."""
         return hashlib.md5(content.encode()).hexdigest()
     
+    @rate_limit("extract_phrases", tokens=1)
+    @validate_input(InputValidator())
     @lru_cache(maxsize=128)
     def extract_key_phrases(self, content: str) -> List[str]:
-        """Extract key phrases from content with caching."""
+        """Extract key phrases from content with security measures."""
         start_time = time.time()
         self.logger.debug("Starting key phrase extraction for content length: {}", len(content))
         
@@ -83,9 +123,11 @@ class TopicAnalyzer:
             self.logger.error("Error in key phrase extraction: {}", str(e))
             return []
     
+    @rate_limit("identify_topics", tokens=2)
+    @validate_input(InputValidator())
     @lru_cache(maxsize=128)
     def identify_topics(self, content: str, num_topics: int = 5) -> List[Dict[str, Any]]:
-        """Identify topics in content with caching."""
+        """Identify topics in content with security measures."""
         start_time = time.time()
         self.logger.debug("Starting topic identification with num_topics={}", num_topics)
         
@@ -135,13 +177,23 @@ class TopicAnalyzer:
             self.logger.error("Error in topic identification: {}", str(e))
             return []
     
+    @rate_limit("analyze_themes", tokens=5)
+    @validate_input(InputValidator())
     def analyze_content_themes(self, video_data: Dict[str, Any]) -> Dict[str, Any]:
-        """Analyze content themes with performance tracking."""
+        """Analyze content themes with security measures."""
         start_time = time.time()
         self.logger.info("Starting content theme analysis for video_id: {}", 
                         video_data.get('video_id', 'unknown'))
         
         try:
+            # Validate and sanitize input
+            errors = self._validator.validate(video_data)
+            if errors:
+                self.logger.error("Validation errors: {}", errors)
+                return {}
+            
+            video_data = self._validator.sanitize(video_data)
+            
             # Combine relevant text fields
             content = ' '.join(filter(None, [
                 video_data.get('title', ''),
