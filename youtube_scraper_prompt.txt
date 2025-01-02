@@ -1,0 +1,774 @@
+
+MVP 1.0 Roadmap
+Sure, here's the revised roadmap with a focus solely on data collection, extraction, and analysis without any elements related to user settings, flashcards, quizzes, learning tools, or learning management systems. I’ve removed all references to user-centric features and learning modules and maintained a strict focus on the process of data scraping, data structuring, and analysis.
+
+
+---
+
+0%-10%: Tools and Frameworks Setup
+
+Key Tasks:
+
+1. Research and Select Frameworks
+
+Objective: Identify and choose frameworks and tools specifically for scraping and processing YouTube video data.
+
+Outcome: Selection of core tools such as Selenium, BeautifulSoup, and Google API for metadata extraction.
+
+
+
+2. Environment Setup
+
+Objective: Prepare the development environment with necessary tools and libraries.
+
+Outcome: A clean environment with virtualenv, installed dependencies (Selenium, BeautifulSoup, etc.), and structured project folder layout.
+
+
+
+3. Initial Script for Data Extraction
+
+Objective: Write basic scripts to collect raw metadata from YouTube API and from video pages.
+
+Outcome: Data collection script successfully extracts video metadata (e.g., title, URL, description) using the YouTube Data API.
+
+
+
+4. Logging and Testing Setup
+
+Objective: Introduce logging and testing functionality to ensure the scraper runs smoothly.
+
+Outcome: Basic logging for script execution and unit tests to ensure correct extraction of video metadata.
+
+
+
+
+
+---
+
+10%-20%: Basic Metadata Extraction and API Integration
+
+Key Tasks:
+
+1. API Integration
+
+Objective: Integrate the YouTube Data API for fetching metadata related to video titles, URLs, descriptions, view count, etc.
+
+Outcome: API successfully connected and able to retrieve relevant metadata (e.g., title, description, view count).
+
+
+
+2. Video Data Structure Design
+
+Objective: Design and implement data structures for storing and processing the extracted video data.
+
+Outcome: A standardized format for storing video metadata (e.g., a list of dictionaries or JSON objects).
+
+
+
+3. Basic Scraping Implementation
+
+Objective: Set up scraping functionality using the YouTube Data API to extract video data such as views, likes, comments, etc.
+
+Outcome: The scraper retrieves metadata for a list of videos based on a search query or channel ID.
+
+
+
+4. Logging Enhancements
+
+Objective: Improve logging functionality for better debugging and understanding of scraper behavior.
+
+Outcome: Enhanced logging to capture more detailed information on data scraping progress and errors.
+
+
+
+
+
+---
+
+20%-30%: Advanced Metadata Extraction (Comments and Keywords)
+
+Key Tasks:
+
+1. Comment Section Scraping
+
+Objective: Implement scraping to gather video comments.
+
+Outcome: Successfully extracts and stores comments for each video, making it available for later analysis.
+
+
+
+2. Video Metadata Enrichment
+
+Objective: Enhance the metadata scraping to include additional details such as keywords, categories, and tags.
+
+Outcome: Extraction of a more comprehensive set of metadata including keywords, categories, and tags.
+
+
+
+3. Data Storage and Management
+
+Objective: Implement proper storage mechanisms for extracted data.
+
+Outcome: Data is saved in structured formats (JSON, CSV) and ready for analysis.
+
+
+
+4. Testing and Validation
+
+Objective: Test the scraping process to ensure all metadata is collected accurately.
+
+Outcome: Tests validate that the scraper works for a wide range of video types and sources.
+
+
+
+
+
+---
+
+30%-40%: Data Cleaning and Structuring
+
+Key Tasks:
+
+1. Data Cleaning
+
+Objective: Develop processes for cleaning the scraped data (e.g., removing duplicates, fixing inconsistencies).
+
+Outcome: Cleaned video data ready for analysis, with missing or corrupt data flagged and handled.
+
+
+
+2. Data Transformation
+
+Objective: Transform raw data into a structured format for analysis (e.g., normalization, categorization).
+
+Outcome: Data is structured in a consistent way, ensuring ease of analysis and interpretation.
+
+
+
+3. Advanced Data ExtractionObjective: Implement more detailed extraction processes (e.g., timestamps for comments, sentiment analysis on comments).
+
+Outcome: Extraction of timestamps and additional metadata from video comments.
+
+
+
+4. Storage System Optimization
+
+Objective: Optimize the storage system to handle larger datasets effectively.
+
+Outcome: Efficient data storage with proper indexing, ready for long-term storage and analysis.
+
+
+
+
+
+---
+
+40%-50%: Data Analysis and Processing
+
+Key Tasks:
+
+1. Initial Data Analysis
+
+Objective: Begin the first phase of data analysis by exploring the video metadata (e.g., trends in view counts, comment sentiment, etc.).
+
+Outcome: Basic analysis reports generated on the most viewed or liked videos, common keywords, etc.
+
+
+
+2. Trend Identification
+
+Objective: Develop algorithms to identify patterns and trends in the video metadata.
+
+Outcome: Preliminary models that can detect trending topics, high-performing video categories, and other significant trends.
+
+
+
+3. Sentiment Analysis on Comments
+
+Objective: Implement basic sentiment analysis on the comments section of videos.
+
+Outcome: Sentiment analysis on comments helps identify positive, neutral, and negative reactions to video content.
+
+
+
+4. Testing Data Accuracy
+
+Objective: Test the accuracy of the extracted data and its analysis.
+
+Outcome: Ensure that extracted metadata and comments align with expectations and that sentiment analysis is correctly capturing feedback.
+
+
+
+
+
+---
+
+50%-60%: Advanced Data Analysis
+
+Key Tasks:
+
+1. Advanced Trend Analysis
+
+Objective: Develop more sophisticated algorithms to identify long-term trends.
+
+Outcome: Insights into video performance over time, audience behavior, and content relevance.
+
+
+
+2. Cross-Video Data Analysis
+
+Objective: Implement cross-analysis across multiple videos to identify larger patterns.
+
+Outcome: Patterns such as common themes or content types that lead to higher engagement.
+
+
+
+3. Data Aggregation and Summary
+
+Objective: Aggregate and summarize the data for easier consumption and understanding.
+
+Outcome: Data summaries and reports generated, allowing insights into what makes videos popular.
+
+
+
+4. Sentiment Over Time Analysis
+
+Objective: Implement sentiment analysis over time to detect shifts in viewer opinion.
+
+Outcome: Insight into how sentiment changes over the life of a video, tied to updates, trends, or external factors.
+
+
+
+
+
+---
+
+60%-70%: Data Visualizations and Insights
+
+Key Tasks:
+
+1. Visualization of Data
+
+Objective: Create visualizations of key trends and video metrics for easier understanding.
+
+Outcome: Basic visualizations (e.g., bar charts, line graphs) of view counts, like-to-dislike ratios, and other metrics.
+
+
+
+2. Dashboard Implementation
+
+Objective: Build an initial dashboard to track key metrics and trends in real time.
+
+Outcome: A simple but effective dashboard displaying key YouTube video data (e.g., views, likes, sentiment).
+
+
+
+3. Trend Forecasting Models
+
+Objective: Build models that forecast future video performance based on current trends.
+
+Outcome: Basic predictive models to identify which videos are likely to trend or perform well in the future.
+
+
+
+4. Data Export and Reporting
+
+Objective: Develop export functionality for easy downloading and sharing of the data.
+
+Outcome: Data export options in CSV, Excel, or JSON formats for easy integration into other tools.
+
+
+
+
+
+---
+
+70%-80%: Scalability and Optimizations
+
+Key Tasks:
+
+1. Optimize Scraping Efficiency
+
+Objective: Optimize scraping logic to handle larger datasets more efficiently.
+
+Outcome: The scraper is now optimized to collect data from many videos without significant slowdowns.
+
+
+
+2. Handling Rate Limits
+
+Objective: Implement strategies to handle API rate limits and avoid hitting them too frequently.
+
+Outcome: Improved error handling and rate-limiting strategies that ensure consistent data collection.
+
+
+
+3. Data Storage Optimization
+
+Objective: Implement more efficient database storage (e.g., SQLite, PostgreSQL).
+
+Outcome: Data is stored in a scalable database that can handle large volumes of information.
+
+
+
+4. Scaling Data Analysis
+Objective: Develop algorithms and infrastructure to handle large-scale data analysis.
+
+Outcome: The analysis engine can now scale to process thousands of videos and comments without major issues.
+
+
+
+
+
+---
+
+80%-90%: Full-Scale Data Collection and Analysis Pipeline
+
+Key Tasks:
+
+1. Build Full Data Collection Pipeline
+
+Objective: Integrate all components of the scraper into a fully functioning pipeline.
+
+Outcome: A fully automated system that collects data from YouTube videos on demand.
+
+
+
+2. Advanced Data Analysis Integration
+
+Objective: Integrate advanced analysis tools and algorithms into the pipeline.
+
+Outcome: Continuous analysis of incoming data as it is collected, producing meaningful insights.
+
+
+
+3. Robust Error Handling
+
+Objective: Implement robust error-handling mechanisms to deal with unexpected issues.
+
+Outcome: The system can recover from failures gracefully, maintaining reliable data collection and analysis.
+
+
+
+4. Pipeline Stress Testing
+
+Objective: Test the scalability and reliability of the data collection and analysis pipeline under high loads.
+
+Outcome: Stress tests confirm the pipeline can handle large-scale operations effectively.
+
+
+
+
+
+---
+
+90%-100%: Optimizations and Final Refinements
+
+Key Tasks:
+
+1. Final Optimization of Algorithms
+
+Objective: Optimize algorithms for maximum efficiency and accuracy.
+
+Outcome: Algorithms run with minimal latency, and results are highly accurate.
+
+
+
+2. Final Quality Assurance Testing
+
+Objective: Conduct comprehensive testing to ensure the entire system functions as expected.
+
+Outcome: The scraper, data analysis, and reporting system are all functioning smoothly.
+
+
+
+3. User Documentation and Maintenance Plan
+
+Objective: Provide clear documentation for system maintenance and future updates.
+
+Outcome: Detailed documentation and guides for developers and users, outlining how to use and maintain the system.
+
+
+
+4. Launch and Continuous Monitoring
+
+Objective: Launch the system and continuously monitor its performance.
+
+Outcome: The system is live, collecting and analyzing data, with ongoing monitoring for performance.
+
+
+
+
+
+---
+
+This roadmap focuses solely on data extraction and data analysis without any learning or user-centric features.
+
+Certainly! Here’s the expanded roadmap with three to five gates/sub-steps per phase of 10%, maintaining the same structure and goals, with objectives and outcomes for each sub-step. Each phase builds on the previous, and each sub-step details how the phase will progress to the next.
+
+
+---
+
+0%-10%: Tools and Frameworks Setup
+
+Sub-step 1: Research and Select Frameworks (2%)
+
+Objective: Identify and evaluate the most suitable frameworks for data extraction from YouTube (e.g., Selenium, BeautifulSoup, Google API).
+
+Outcome: A list of tools and frameworks that best meet the requirements for scraping and processing video data.
+
+
+Sub-step 2: Set Up Development Environment (2%)
+
+Objective: Set up the development environment with the necessary tools, libraries, and dependencies (e.g., virtualenv, Selenium, BeautifulSoup).
+
+Outcome: A clean, organized development environment ready for coding with all dependencies installed and configured.
+
+
+Sub-step 3: Write Initial Data Extraction Script (3%)
+
+Objective: Implement a basic script that can fetch metadata using the YouTube Data API and Selenium.
+
+Outcome: A working script that extracts basic video metadata such as title, URL, description, and view count.
+
+
+Sub-step 4: Implement Logging and Testing Framework (3%)
+
+Objective: Integrate logging functionality to track script behavior, errors, and data flow. Set up unit testing for basic functionality.
+
+Outcome: A logging system that captures script progress and errors, along with unit tests for basic data extraction functionality.
+
+
+
+---
+
+10%-20%: Basic Metadata Extraction and API Integration
+
+Sub-step 1: Integrate YouTube Data API (4%)
+
+Objective: Connect to the YouTube Data API and configure it to retrieve video metadata based on predefined queries (video ID, channel, search query).
+
+Outcome: Successful integration with YouTube API and retrieval of basic metadata for selected videos.
+
+
+Sub-step 2: Structure Extracted Data (4%)
+
+Objective: Design and implement data structures (JSON, dictionary) to store extracted video metadata in a standardized format.
+
+Outcome: Video metadata is stored in structured formats (JSON or dictionaries) for further processing and analysis.
+
+
+Sub-step 3: Test Data Extraction (4%)
+
+Objective: Test the API integration and data structure implementation on a batch of videos to ensure metadata is extracted correctly.
+
+Outcome: All metadata (e.g., title, view count, description) is extracted correctly, and there are no discrepancies in the output.
+
+
+Sub-step 4: Implement API Rate Limiting Strategy (4%)
+
+Objective: Integrate rate limiting mechanisms to avoid hitting YouTube API’s request limits (e.g., pause between requests, exponential backoff).
+
+Outcome: Smooth API operation without exceeding rate limits or causing errors, ensuring stable data collection.
+
+
+
+---
+
+20%-30%: Advanced Metadata Extraction (Comments and Keywords)
+
+Sub-step 1: Implement Comment Extraction (5%)
+
+Objective: Develop functionality to extract comments from video pages using Selenium or other scraping methods.
+
+Outcome: Comment data from videos is successfully retrieved and stored for analysis.
+
+
+Sub-step 2: Enrich Video Metadata (5%)
+
+Objective: Enhance the metadata extraction process by adding additional fields such as video tags, categories, and keywords.
+
+Outcome: Extended metadata includes video tags, categories, and keywords, enriching the dataset.
+
+
+Sub-step 3: Organize Data for Storage (5%)
+
+Objective: Structure the collected data to ensure easy storage in a database or file system (e.g., JSON or CSV files).
+
+Outcome: Organized data ready for storage with appropriate fields and a consistent structure across multiple video entries.
+
+
+Sub-step 4: Create Automated Data Collection (5%)
+
+Objective: Automate the process of collecting metadata for large batches of videos, based on specific queries or YouTube channels.
+
+Outcome: Automated collection system that gathers metadata and comment data across multiple videos at scale.
+
+
+
+---
+
+30%-40%: Data Cleaning and Structuring
+
+Sub-step 1: Remove Duplicates and Inconsistent Entries (5%)
+Objective: Implement algorithms to detect and remove duplicate entries, inconsistencies, and incomplete metadata.
+
+Outcome: A cleaned dataset with no duplicates and consistent entries, improving data quality.
+
+
+Sub-step 2: Handle Missing or Corrupted Data (5%)
+
+Objective: Develop methods to handle missing or corrupted data (e.g., replacing with placeholder, removing).
+
+Outcome: Missing or corrupted data entries are handled appropriately, ensuring data integrity.
+
+
+Sub-step 3: Normalize Data (5%)
+
+Objective: Normalize fields like view counts, likes/dislikes, and comments into comparable formats to allow for easy analysis.
+
+Outcome: All numerical fields are normalized, making data ready for aggregation and analysis.
+
+
+Sub-step 4: Structure Data into Final Format (5%)
+
+Objective: Finalize data structures, ensuring all video metadata is structured for analysis (e.g., converting to CSV, JSON, or database).
+
+Outcome: Data is fully structured and stored in an analysis-ready format.
+
+
+
+---
+
+40%-50%: Data Analysis and Processing
+
+Sub-step 1: Perform Initial Data Exploration (5%)
+
+Objective: Conduct exploratory analysis on the metadata to identify initial trends (e.g., average view counts, common keywords).
+
+Outcome: Initial insights from the data, such as top-performing videos based on view counts and comments.
+
+
+Sub-step 2: Implement Trend Detection Algorithms (5%)
+
+Objective: Develop basic algorithms to detect patterns in video performance (e.g., categories that tend to attract more views).
+
+Outcome: Trend analysis that identifies potential areas for further analysis or focus, such as trending video categories or creators.
+
+
+Sub-step 3: Perform Sentiment Analysis on Comments (5%)
+
+Objective: Implement basic sentiment analysis algorithms on video comments to understand viewer reactions (positive/negative).
+
+Outcome: Sentiment analysis results indicating overall sentiment for video content based on comment data.
+
+
+Sub-step 4: Aggregate Key Metrics (5%)
+
+Objective: Aggregate key video metrics (e.g., views, likes, comments) into summary reports for analysis.
+
+Outcome: Aggregated data reports with key performance metrics, such as average views per video or likes/dislikes ratio.
+
+
+
+---
+
+50%-60%: Advanced Data Analysis
+
+Sub-step 1: Build Predictive Models (5%)
+
+Objective: Develop initial predictive models to forecast video performance based on metadata (e.g., views, likes).
+
+Outcome: Basic predictive models that can estimate future video success based on current trends.
+
+
+Sub-step 2: Cross-Video Data Analysis (5%)
+
+Objective: Perform cross-video analysis to find relationships between video features (e.g., content category and engagement).
+
+Outcome: Insights into what features of a video (title, category, description) influence its success, creating a foundation for predictive analysis.
+
+
+Sub-step 3: Implement Sentiment Analysis Over Time (5%)
+
+Objective: Analyze sentiment trends over time, linking sentiment to video performance or other metrics.
+
+Outcome: Sentiment over time analysis, revealing how audience sentiment evolves after a video’s release or as external events influence it.
+
+
+Sub-step 4: Validate Data and Models (5%)
+
+Objective: Validate the accuracy of the data extraction process and predictive models using test datasets.
+
+Outcome: Verified data extraction and predictive models that deliver reliable insights based on historical data.
+
+
+
+---
+
+60%-70%: Data Visualizations and Insights
+
+Sub-step 1: Create Data Visualizations (5%)
+
+Objective: Build initial visualizations such as bar charts, line graphs, and pie charts to represent video data trends.
+
+Outcome: Visual representations of data that make it easier to identify patterns and insights.
+
+
+Sub-step 2: Develop Dashboards for Tracking Metrics (5%)
+
+Objective: Develop dashboards to track key performance metrics (e.g., views, likes/dislikes, sentiment).
+
+Outcome: A user-friendly dashboard displaying real-time metrics for the collected data, with interactive features for deeper exploration.
+
+
+Sub-step 3: Develop Trend Forecasting Models (5%)
+
+Objective: Build models that forecast future video performance based on historical data.
+
+Outcome: Trend forecasting that predicts which types of videos are likely to perform well in the future.
+
+
+Sub-step 4: Automate Data Reporting (5%)
+
+Objective: Implement automated reporting functionality to generate weekly or monthly performance reports.
+
+Outcome: Automated reports generated regularly, summarizing key metrics and insights for easy consumption.
+
+
+
+---
+
+70%-80%: Scalability and Optimizations
+
+Sub-step 1: Improve Scraper Performance (5%)
+
+Objective: Optimize scraper code for faster performance and lower resource consumption.
+
+Outcome: A faster, more efficient scraper capable of collecting data from large sets of videos without significant delays.
+
+
+Sub-step 2: Handle API Rate Limits and Errors (5%)
+
+Objective: Improve error-handling and rate-limiting mechanisms to avoid API throttling and ensure smooth operation.
+
+Outcome: Optimized API usage with minimal downtime or disruptions, ensuring reliable data collection.
+
+
+
+
+Sure, here's the continuation of the roadmap:
+
+
+---
+
+80%-90%: Enhanced Data Analysis and Scaling
+
+Sub-step 1: Implement Advanced Predictive Modeling (5%)
+
+Objective: Develop more sophisticated predictive models using machine learning algorithms (e.g., regression, random forests, or neural networks) to forecast video performance based on metadata and trends.
+
+Outcome: Enhanced predictive models that provide more accurate forecasts for video performance, including potential views, engagement, and sentiment.
+
+
+Sub-step 2: Expand Data Collection for Larger Datasets (5%)
+
+Objective: Scale the scraper to handle larger batches of videos, including expanding to new video categories, different channels, or broader search queries.
+
+Outcome: Scalable data collection infrastructure that can handle larger datasets efficiently without breaking performance or reliability.
+
+
+Sub-step 3: Integrate Data from Multiple Platforms (5%)
+
+Objective: Start integrating data from other video platforms (e.g., Vimeo, Dailymotion) and social media platforms (e.g., Twitter, Facebook) to enrich insights and broaden the scope of the analysis.
+
+Outcome: A broader dataset that includes multi-platform data, allowing for cross-platform insights and a more comprehensive view of video performance.
+
+
+Sub-step 4: Create Scalable Data Storage System (5%)
+
+Objective: Set up a scalable storage system (e.g., cloud-based, distributed databases) to handle large volumes of data efficiently.
+
+Outcome: A scalable and efficient data storage solution capable of managing increasing volumes of video metadata and analysis results.
+
+
+
+---
+
+90%-100%: Final Enhancements and Refinement
+
+Sub-step 1: Implement Real-Time Data Analysis (5%)
+
+Objective: Introduce real-time data collection and analysis features, so the system can process and generate insights for newly scraped data immediately after it’s collected.
+
+Outcome: Real-time data processing pipeline that can continuously update and analyze new video data as it is scraped.
+
+
+Sub-step 2: Optimize Data Processing Algorithms (5%)
+
+Objective: Refine data processing algorithms to improve the accuracy, efficiency, and speed of data analysis, especially for large datasets.
+
+Outcome: Optimized processing pipeline capable of handling large-scale data analysis with minimal latency and maximum efficiency.
+
+
+Sub-step 3: Integrate Automated Reporting System (5%)
+
+Objective: Implement a fully automated reporting system that generates performance summaries and insights at scheduled intervals (daily, weekly).
+
+Outcome: An automated reporting system that provides stakeholders with key insights on video performance and trends without manual intervention.
+
+
+Sub-step 4: Refine User Interface (UI) and User Experience (UX) (5%)
+
+Objective: Polish the user interface to improve usability, making it intuitive and easy to navigate for those reviewing the data and insights.
+
+Outcome: A clean, user-friendly interface that allows users to interact with and visualize data efficiently, with minimal learning curve.
+
+
+
+---
+100%: Fully Integrated, Scalable YouTube Video Web Scraper
+
+Final Objective: Complete integration of all systems—data extraction, storage, analysis, predictive modeling, visualizations, reporting, and scalability—into a fully functional, reliable, and optimized YouTube video web scraper.
+
+Final Outcome: A state-of-the-art YouTube video web scraper capable of:
+
+Efficiently scraping video metadata, including advanced comment extraction, video performance metrics, and sentiment analysis.
+
+Analyzing trends, sentiment, and engagement metrics across videos, channels, and categories.
+
+Providing predictive insights about video success, leveraging advanced models and machine learning techniques.
+
+Offering real-time data processing, automated reporting, and a user-friendly interface for ease of data interaction.
+
+
+
+---
+
+Summary of Key Outcomes and Metrics
+
+Data Extraction Efficiency: A system that extracts data quickly from large batches of videos.
+
+Data Quality: Clean, structured, and normalized data ready for analysis.
+
+Predictive Accuracy: Reliable forecasting models that predict video performance with high accuracy.
+
+Real-Time Processing: Automated and real-time analysis for newly scraped data.
+
+User Interface Usability: A simple and intuitive interface to explore and visualize the data and insights.
+
+
+
+---
+
+This roadmap structure should provide a clear path to build a state-of-the-art YouTube video web scraper, focusing on the core goals of data extraction and analysis, while maintaining a focus on scalability and efficiency.
+
+
+**************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************
+
+
+
+
+
+
+********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************
